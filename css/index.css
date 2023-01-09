@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html,body{
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #f7fcff; */
+    /* background-image: url(https://www.yangshangzhen.com/bing/wallpaper); */
+    background-size: 100%;
+}
+
+html::after {
+    content: "";
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    background-color: #00000080;
+    pointer-events: none;
+  }
+
+
+/* 可删掉，显示效果还不错但是很奇怪 */
+/* body{
+    filter: brightness(120%);
+} */
+
+/* 调试 */
+div{
+    /* border:1px blue solid; */
+}
+
+div{
+    display: flex;
+}
+
+/* 按钮 */
+button{
+    border: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.5vw;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    transition: .3s;
+    color:white;
+    background-color: rgba(185, 185, 185, 0.3);
+    box-shadow: 0px 3px 10px #172b361f;
+    backdrop-filter: blur(10px);
+}
+
+button:hover{
+    background: linear-gradient(45deg, rgba(89,168,210,1) 0%, rgba(54,186,122,1)100%);    transform: scale(1.05);
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+/* 所有body中的div */
+body>div{
+    height: auto;
+    width: 100%;
+    align-items: center;
+    transition: .3s;
+}
+
+/* 头部 */
+.header{
+    position: absolute;
+    top:0px;
+    height: 7vh;
+    justify-content: space-between;
+}
+
+.header>div{
+    flex-direction: row;
+    margin: 20px;
+    color:white;
+}
+
+.header>div>div{
+    margin: 10px;
+}
+
+.header>div>div:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* logo */
+
+body>main>div{ 
+    justify-content: center;
+}
+
+body>main>div>img{
+    width: 20vw;
+    height: auto;
+}
+
+/* 输入框 */
+
+.inputBox{
+    padding: 10px;
+}
+
+.inputBox>input{
+    width: 25vw;
+    font-size: 2vw;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .3s;
+    background-color: rgba(185, 185, 185, 0.7);
+    box-shadow: 0px 3px 10px #172b361f;
+    backdrop-filter: blur(10px);
+}
+
+.inputBox>input:hover{
+    width: 40vw;
+}
+
+.inputBox>input:focus{
+    background-color: white;
+    border-bottom: 3px #59A8D2 solid;
+}
+
+/* 按钮框 */
+.buttonBox{
+    transition: .5s;
+    transform: scale(0);
+}
+
+/* 搜索引擎选择 */
+.searches{
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 30vh;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%);
+    transition: .5s;
+    bottom: -500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px #172b361f;
+    /* justify-content: space-between; */
+}
+
+.searches>button{
+    position: absolute;
+    top:10px;
+    right:10px;
+    color:black;
+    display: flex;
+    padding: 8px;
+}
+
+.searchesSide{
+    flex-direction: column;
+}
+
+#show{
+    font-size: 1.5vw;
+}
+
+.searchesList{
+    margin-left: 60px;
+    overflow-y: auto;
+}
+
+.searches>div{
+    height: 100%;
+    width: auto;
+}
+
+.searchesList>ul>li{
+    border-top:1px #172b366b solid;
+    list-style: none;
+    padding: 5px;
+    font-size: 1.6vw;
+    color:#172b36b9;
+}
+
+.searchesList>ul>li:hover{
+    background-color: #172b3611;
+    cursor: pointer;
+}
+
+.searchesList>ul>li>button{
+    color: black;
+}
+
+.searchesTitle{
+    height: auto;
+    font-size: 3vw;
+    background:linear-gradient(45deg, rgba(89,168,210,1) 0%, rgba(54,186,122,1));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 3px 10px #172b361f;;
+}
+
+/* 捷径 */
+.jxToGo{
+    transition: .5s;
+    background-color: white;
+    height: 95%;
+    width: 95%;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;bottom: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.jxToGo>button{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    color:black;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+h4{
+    font-size: 2vw;
+}
+
+/* a */
+a{
+    border: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.2vw;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    transition: .3s;
+    color:white;
+    background-color: rgba(185, 185, 185, 0.5);
+    box-shadow: 0px 3px 10px #172b361f;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    background: linear-gradient(45deg, rgba(89,168,210,1) 0%, rgba(54,186,122,1)100%);    transform: scale(1.05);
+    cursor: pointer;
+}
+
+a:active{
+    transform: scale(0.9);
+}
+
+/* 小屏幕提醒 */
+#notice{
+    display: none;
+}
+
+@media screen and (max-width : 700px){
+    #notice{
+        display: flex;
+    }
+}
