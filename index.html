@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
-    <title>Document</title>
+    <title>StartPage</title>
 </head>
 
 <body onload="bg()">
@@ -18,7 +18,7 @@
         <div>
             <div id = "enter">按下回车以搜索</div>
             <div id = "notice">您好！目前 Techyes StartPage 不支持响应式，请您横屏使用</div>
-            <div onclick = " window.location.href = 'https://thisis.host/'">技协导航</div>
+            <div onclick = " window.location.href = 'https\://thisis.host/'">技协导航</div>
             <div onclick="about()">关于</div>
             <div id="fullScreen"  onclick="handleFullScreen()">全屏</div>
             <div id="disFullScreen"  onclick="fixerEFS(),exitFullscreen()">退出</div>
@@ -29,7 +29,7 @@
             <img src="./img/Techyes.png" alt=".png">
         </div>
         <div class="inputBox">
-            <input type="text" id="inputMain" onkeypress="startSearch()">
+            <input type="text" id="inputMain" >
         </div>
         <div class="buttonBox">
             <button onclick="searchesOpen(true)">搜索引擎</button>
@@ -38,7 +38,7 @@
         </div>
         <div class="searches">
             <button onclick="searchesOpen(false)">
-                X
+                ×
             </button>
             <div class="searchesSide">
                 <h2 class="searchesTitle">
@@ -56,7 +56,7 @@
     </main>
     <div class="jxToGo">
         <button onclick="jxToGoOpen(false)">
-            X
+            ×
         </button>
         <iframe height="90%" width="90%" src="https://thisis.host" frameborder="0"></iframe>
     </div>

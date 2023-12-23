@@ -14,7 +14,7 @@ html,body{
     justify-content: center;
     /* background-color: #f7fcff; */
     /* background-image: url(https://www.yangshangzhen.com/bing/wallpaper); */
-    background-size: cover;
+    background-size: 100%;
 }
 
 html::after {

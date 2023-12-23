@@ -51,8 +51,19 @@ function changeSearcher(name,outText){
 
 function startSearch(){
     let text = document.getElementById("inputMain").value;
-    window.location.href = searcher + text;
+    window.open(searcher + text);
 }
+
+
+// 回车搜索的控制
+let mainInput = document.getElementById("inputMain");
+mainInput.onkeyup = function(){
+    var keyEvent = event || window.event;
+    if (keyEvent && keyEvent.keyCode == 13){
+        startSearch();
+    }
+}
+
 
 function fanyi(){
     let text = document.getElementById("inputMain").value;
@@ -60,5 +71,5 @@ function fanyi(){
 }
 
 function about(){
-    alert("没有什么关于\n开发者：TengKong@野生技协\n捷径来源：Zhilu 野生技协导航\n没了awa")
+    alert("\第二个版本，之前回车搜索有bug，优化了一点细节。\n开发者：TengKong@野生技协\n捷径来源：Zhilu 野生技协导航\n没了awa")
 }
